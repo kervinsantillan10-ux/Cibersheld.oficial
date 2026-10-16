@@ -1,0 +1,14 @@
+{
+  "name": "cibershield-server",
+  "version": "1.0.0",
+  "description": "Servidor de registro para Cibershield",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^5.1.1",
+    "express": "^4.19.2",
+    "sqlite3": "^5.1.7"
+  }
+}
