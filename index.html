@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberShield - Inicio</title>
+    <link rel="stylesheet" href="css/index.css">
+    
+    <!-- 1. Agrega el CSS del chatbot aquí -->
+    <link rel="stylesheet" href="./css/chatboot.css">
+  </head>
+<body>
+
+  <header>
+    <div class="nav-container">
+    <div class="logo-box">
+    <div class="logo-icon"><img src="img/logo-cibershelf.png" alt=""></div>
+    <span class="logo-text">CIBERSHIELD</span>
+</div>
+<nav>
+  <ul>
+    <li><a href="index.html" class="active">INICIO</a></li>
+    <li><a href="catalogo.html">CATÁLOGO</a></li>
+    <li><a href="servicios.html">SERVICIOS</a></li>
+    <li><a href="nosotros.html">NOSOTROS</a></li>
+    <li><a href="contacto.html">CONTACTO</a></li>
+    
+    <!-- Contenedor dinámico para la sesión -->
+    <span id="auth-container" style="display: contents;">
+      <li><a href="formulario registro.html">REGISTRO</a></li>
+      <li><a href="login.html">INICIAR SESIÓN</a></li>
+    </span>
+    
+  </ul>
+</nav>
+    </div>
+  </header>
+
+  <main>
+   
+<section class="hero">
+
+    <div class="hero-texto">
+        <p class="subtitulo">SEGURIDAD DIGITAL</p>
+
+        <h1>PROTEGE TU<br>MUNDO DIGITAL</h1>
+
+        <p>
+            Antivirus, firewall, VPN y llaves de seguridad
+            para personas y empresas.
+        </p>
+
+        <a href="catalogo.html" class="boton">
+            VER PRODUCTOS
+        </a>
+    </div>
+
+    <div class="hero-image">
+        <img
+            src="img/Ciberseguridad futurista en azul y amarillo.png"
+            alt="Protección digital CiberShield"
+        >
+    </div>
+
+</section>
+
+
+   
+<section class="info-section">
+    <h2>¿POR QUÉ ES IMPORTANTE PROTEGERTE?</h2>
+
+    <div class="info-content">
+        <p>
+            Cada dispositivo conectado guarda información personal,
+            contraseñas, fotografías, conversaciones y documentos
+            importantes.
+        </p>
+
+        <div class="image-placeholder">
+            <img
+                src="img/cibershelf-1,1.png"
+                alt="Seguridad digital y protección de datos">
+        </div>
+    </div>
+</section>
+
+  </main>
+
+  <footer>
+    <p>© 2026 CiberShield · Lima, Perú</p>
+  </footer>
+
+  <!-- 2. Agrega el contenedor del chatbot aquí -->
+  <div id="chatbot-wrapper"></div>
+
+  <script src="./js/efectos.js"></script>
+  <!-- Enlace al script del menú dinámico -->
+  <script src="./js/menu.js"></script>
+  
+ <!-- 3. Agrega el script del chatbot al final -->
+<script src="./js/chatboot.js?v=1"></script>
+<script src="./js/carrito.js"></script>
+</body>
+</html>

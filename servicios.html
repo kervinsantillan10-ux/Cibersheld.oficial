@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Servicios</title>
+  <link rel="stylesheet" href="./css/servicios.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo-box">
+        <div class="logo-icon"><img src="img/logo-cibershelf.png" alt=""></div>
+        <span class="logo-text">CIBERSHIELD</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="catalogo.html">CATÁLOGO</a></li>
+          <li><a href="servicios.html" class="active">SERVICIOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+          
+          <!-- Contenedor dinámico para la sesión -->
+          <span id="auth-container" style="display: contents;">
+            <li><a href="formulario registro.html">REGISTRO</a></li>
+            <li><a href="login.html">INICIAR SESIÓN</a></li>
+          </span>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-title-section">
+      <h1>NUESTROS SERVICIOS</h1>
+      <p>Elige el servicio que mejor se adapte a tus necesidades.</p>
+    </div>
+
+    <div class="cards-grid">
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="https://www.sangfor.com/sites/default/files/inline-images/What%20is%20a%20Firewall%20blog%20article.jpeg" alt="Instalación y Firewall">
+        </div>
+        <h3>INSTALACIÓN</h3>
+        <p class="description">Configuración de equipos, antivirus, VPN y firewall.</p>
+        <div class="card-footer">
+          <span class="price">S/ 100</span>
+          <a href="contacto.html" class="btn">SOLICITAR</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="https://img.computing.es/wp-content/uploads/2024/02/12110856/Consultoria.jpeg" alt="Consultoría Informática">
+        </div>
+        <h3>CONSULTORÍA</h3>
+        <p class="description">Evaluación de riesgos y recomendación de soluciones.</p>
+        <div class="card-footer">
+          <span class="price">S/ 150</span>
+          <a href="contacto.html" class="btn">SOLICITAR</a>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTNQjLBvsabaTjGs-DvTv5B4SzWGqFQ4A58J31q01dje4Qp0AmNK_iIWY7&s=10" alt="Soporte Técnico">
+        </div>
+        <h3>SOPORTE TÉCNICO</h3>
+        <p class="description">Atención rápida y monitoreo ante incidentes.</p>
+        <div class="card-footer">
+          <span class="price">S/ 250</span>
+          <a href="contacto.html" class="btn">SOLICITAR</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CiberShield · Lima, Perú</p>
+  </footer>
+<script src="./js/efectos.js"></script>
+<!-- Enlace al script del menú dinámico -->
+<script src="./js/menu.js"></script>
+<script src="./js/chatboot.js?v=1"></script>
+<script src="./js/carrito.js"></script>
+</body>
+</html>

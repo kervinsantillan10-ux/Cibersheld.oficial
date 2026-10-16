@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Catálogo de Productos</title>
+  <link rel="stylesheet" href="./css/catalogo.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo-box">
+        <div class="logo-icon">
+          <img src="img/logo-cibershelf.png" alt="Logo CiberShield">
+        </div>
+        <span class="logo-text">CIBERSHIELD</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="catalogo.html" class="active">CATÁLOGO</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="contacto.html">CONTACTO</a></li>
+          
+          <!-- Contenedor dinámico para la sesión -->
+          <span id="auth-container" style="display: contents;">
+            <li><a href="formulario registro.html">REGISTRO</a></li>
+            <li><a href="login.html">INICIAR SESIÓN</a></li>
+          </span>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- Grilla de Productos -->
+    <div class="cards-grid">
+      <!-- Producto 1 -->
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="img/Antivirus Pro.jpg" alt="Antivirus Pro">
+        </div>
+        <h3>Antivirus Pro</h3>
+        <div class="card-footer">
+          <span class="price">S/ 89</span>
+          <!-- Botón modificado para el carrito -->
+          <button class="btn btn-agregar" data-nombre="Antivirus Pro" data-precio="89">AGREGAR</button>
+        </div>
+      </div>
+
+      <!-- Producto 2 -->
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="img/Antivirus Hogar.jpg" alt="Antivirus Hogar">
+        </div>
+        <h3>Antivirus Hogar</h3>
+        <div class="card-footer">
+          <span class="price">S/ 59</span>
+          <!-- Botón modificado para el carrito -->
+          <button class="btn btn-agregar" data-nombre="Antivirus Hogar" data-precio="59">AGREGAR</button>
+        </div>
+      </div>
+
+      <!-- Producto 3 -->
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="img/VPN Seguros.jpg" alt="VPN Segura">
+        </div>
+        <h3>VPN Segura</h3>
+        <div class="card-footer">
+          <span class="price">S/ 120</span>
+          <!-- Botón modificado para el carrito -->
+          <button class="btn btn-agregar" data-nombre="VPN Segura" data-precio="120">AGREGAR</button>
+        </div>
+      </div>
+
+      <!-- Producto 4 -->
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="img/Firewall Empresarial.jpg" alt="Firewall Empresarial">
+        </div>
+        <h3>Firewall Empresarial</h3>
+        <div class="card-footer">
+          <span class="price">S/ 1,500</span>
+          <!-- Botón modificado para el carrito (precio sin comas en el data-precio) -->
+          <button class="btn btn-agregar" data-nombre="Firewall Empresarial" data-precio="1500">AGREGAR</button>
+        </div>
+      </div>
+
+      <!-- Producto 5 -->
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="img/Firewall Basico.jpg" alt="Firewall Básico">
+        </div>
+        <h3>Firewall Básico</h3>
+        <div class="card-footer">
+          <span class="price">S/ 600</span>
+          <!-- Botón modificado para el carrito -->
+          <button class="btn btn-agregar" data-nombre="Firewall Básico" data-precio="600">AGREGAR</button>
+        </div>
+      </div>
+
+      <!-- Producto 6 -->
+      <div class="card">
+        <div class="image-placeholder">
+          <img src="img/Llaves USB.jpg" alt="Llave USB">
+        </div>
+        <h3>Llave USB</h3>
+        <div class="card-footer">
+          <span class="price">S/ 150</span>
+          <!-- Botón modificado para el carrito -->
+          <button class="btn btn-agregar" data-nombre="Llave USB" data-precio="150">AGREGAR</button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CiberShield · Lima, Perú</p>
+  </footer>
+<script src="./js/efectos.js"></script>
+<!-- Enlace al script del menú dinámico -->
+<script src="./js/menu.js"></script>
+<script src="./js/chatboot.js?v=1"></script>
+<!-- NUEVO: Enlace al script del carrito -->
+<script src="./js/carrito.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Contacto</title>
+  <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <div class="logo-box">
+        <div class="logo-icon"><img src="img/logo-cibershelf.png" alt=""></div>
+        <span class="logo-text">CIBERSHIELD</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">INICIO</a></li>
+          <li><a href="catalogo.html">CATÁLOGO</a></li>
+          <li><a href="servicios.html">SERVICIOS</a></li>
+          <li><a href="nosotros.html">NOSOTROS</a></li>
+          <li><a href="contacto.html" class="active">CONTACTO</a></li>
+          
+          <!-- Contenedor dinámico para la sesión -->
+          <span id="auth-container" style="display: contents;">
+            <li><a href="./formulario registro.html">REGISTRO</a></li>
+            <li><a href="./login.html">INICIAR SESIÓN</a></li>
+          </span>
+          
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <!-- Columna Izquierda: Formulario -->
+      <section class="contact-form">
+        <h2>CONTÁCTANOS</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="presupuesto">Presupuesto</label>
+            <input type="text" id="presupuesto" name="presupuesto">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn">ENVIAR</button>
+        </form>
+      </section>
+
+      <!-- Columna Derecha: Redes Sociales y Teléfono -->
+<section class="social-section">
+    <h2>REDES SOCIALES</h2>
+    
+    <!-- Contenedor en cuadrícula 2x2 para las apps -->
+    <div class="social-grid">
+        <div class="image-placeholder">
+            <img src="img/IG.jpg" alt="Instagram">
+        </div>
+        <div class="image-placeholder">
+            <img src="img/FB.jpg" alt="Facebook">
+        </div>
+        <div class="image-placeholder">
+            <img src="img/X.jpg" alt="X">
+        </div>
+        <div class="image-placeholder">
+            <img src="img/tiktok.jpg" alt="TikTok">
+        </div>
+    </div>
+    
+    <!-- Bloque alineado para el teléfono -->
+    <div class="phone-box">
+        <span class="phone-icon">📞</span>
+        <span>+51 951 108 456</span>
+    </div>
+</section>
+    </div>
+  </main>
+
+  <footer>
+    <p>© 2026 CiberShield · Lima, Perú</p>
+  </footer>
+  <script src="js/contacto.js"></script>
+  <script src="./js/efectos.js"></script>
+  <!-- Enlace al script del menú dinámico -->
+  <script src="js/menu.js"></script>
+  <script src="./js/chatboot.js?v=1"></script>
+  <script src="./js/carrito.js"></script> 
+
+</body>
+</html>

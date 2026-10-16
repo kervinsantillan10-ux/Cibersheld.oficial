@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CiberShield - Perfil de Usuario</title>
+    
+    <!-- Librerías Externas -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Enlace a tu CSS -->
+    <link rel="stylesheet" href="./css/usuario.css">
+</head>
+<body class="antialiased min-h-screen flex flex-col bg-[#0b1224] text-white">
+
+    <!-- Top Navigation (Encabezado Corregido y Sincronizado en una sola línea) -->
+    <header class="bg-[#0b1224] border-b border-[#1a294c] py-4 px-6 md:px-12 flex flex-col xl:flex-row items-center justify-between gap-6 z-10 sticky top-0 shadow-lg w-full">
+        
+        <!-- 1. Bloque Izquierdo: Logo y Nombre -->
+        <div class="flex items-center justify-center xl:justify-start gap-4 w-full xl:w-1/3">
+            <img src="img/logo-cibershelf.png" alt="Logo" class="w-12 h-12 object-contain rounded-full border-2 border-[#ffd644] shadow-[0_0_10px_rgba(255,214,68,0.2)] bg-[#070b14]">
+            <span class="font-extrabold text-2xl tracking-widest text-white uppercase">Cibershield</span>
+        </div>
+        
+        <!-- 2. Bloque Central: Menú de Navegación Oficial -->
+        <nav class="flex flex-wrap items-center justify-center gap-4 md:gap-8 text-sm font-bold tracking-wide w-full xl:w-1/3">
+            <a href="index.html" class="text-white hover:text-[#ffd644] uppercase transition-colors whitespace-nowrap">Inicio</a>
+            <a href="catalogo.html" class="text-white hover:text-[#ffd644] uppercase transition-colors whitespace-nowrap">Catálogo</a>
+            <a href="servicios.html" class="text-white hover:text-[#ffd644] uppercase transition-colors whitespace-nowrap">Servicios</a>
+            <a href="nosotros.html" class="text-white hover:text-[#ffd644] uppercase transition-colors whitespace-nowrap">Nosotros</a>
+            <a href="contacto.html" class="text-white hover:text-[#ffd644] uppercase transition-colors whitespace-nowrap">Contacto</a>
+        </nav>
+
+        <!-- 3. Bloque Derecho: Acciones de Usuario -->
+        <div class="flex items-center justify-center xl:justify-end gap-5 text-sm font-bold tracking-wide w-full xl:w-1/3">
+            <div class="hidden xl:block w-px h-6 bg-[#1a294c]"></div>
+            <a href="usuario.html" class="text-[#ffd644] uppercase transition-colors whitespace-nowrap">Mi Perfil</a>
+            <a href="index.html" class="text-white hover:text-red-400 uppercase transition-colors flex items-center gap-2 whitespace-nowrap">
+                Cerrar Sesión <i class="fa-solid fa-arrow-right-from-bracket"></i>
+            </a>
+        </div>
+        
+    </header>
+
+    <!-- Dashboard Section -->
+    <div class="flex-grow container mx-auto px-4 py-8 md:px-8 max-w-[1280px]">
+        <div class="flex flex-col md:flex-row gap-8 lg:gap-12">
+            
+            <!-- Sidebar: Perfil -->
+            <aside class="w-full md:w-1/4 lg:w-3/12 flex flex-col items-center md:items-start">
+                <div class="relative group cursor-pointer mb-6" onclick="openEditModal()">
+                    <div class="w-64 h-64 md:w-full md:h-auto md:aspect-square rounded-full overflow-hidden border-2 border-[#ffd644] shadow-[0_0_15px_rgba(255,214,68,0.2)] relative bg-[#121e3b]">
+                        <img id="profile-image" src="https://placehold.co/400x400/121e3b/ffd644?text=CS" alt="Perfil" class="w-full h-full object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-60 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-200">
+                            <div class="flex items-center gap-2 text-[#ffd644] font-bold">
+                                <i class="fa-solid fa-camera"></i><span>Cambiar Foto</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full text-center md:text-left">
+                    <h1 class="text-2xl font-bold text-[#ffd644] mb-1 flex items-center justify-center md:justify-start gap-3">
+                        <span id="profile-name">Cesar Luis</span>
+                        <button onclick="openEditModal()" class="text-[#a0aabf] hover:text-white text-sm" title="Editar Perfil">
+                            <i class="fa-solid fa-pen"></i>
+                        </button>
+                    </h1>
+                    <p class="text-[#a0aabf] text-sm mb-4">@<span class="font-mono">ciber_admin</span></p>
+                </div>
+
+                <div class="w-full border-t border-[#1a294c] pt-4 mb-6">
+                    <button class="w-full bg-[#1a294c] hover:bg-[#ffd644] text-white hover:text-[#121e3b] py-2 rounded text-sm mb-4 font-bold transition-colors">
+                        <i class="fa-solid fa-headset mr-1"></i> Soporte Técnico
+                    </button>
+                    
+                    <div class="space-y-3 text-sm text-[#a0aabf]">
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-shield-check w-5 text-center text-[#ffd644]"></i><span>Cuenta Verificada</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot w-5 text-center text-[#ffd644]"></i><span>Servidor: LATAM-01</span>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-calendar-days w-5 text-center text-[#ffd644]"></i><span>Miembro Activo</span>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Contenido Principal (Pestañas) -->
+            <main class="w-full md:w-3/4 lg:w-9/12">
+                
+                <!-- Pestañas de Navegación -->
+                <div class="border-b border-[#1a294c] mb-6 flex overflow-x-auto">
+                    <button id="tab-compras" onclick="switchTab('compras')" class="px-4 py-2 border-b-2 border-[#ffd644] text-white font-bold whitespace-nowrap flex items-center gap-2 cursor-pointer transition-colors">
+                        <i class="fa-solid fa-box-open text-[#ffd644]"></i> Historial de Compras
+                    </button>
+                    <button id="tab-facturacion" onclick="switchTab('facturacion')" class="px-4 py-2 border-b-2 border-transparent text-[#a0aabf] hover:text-white whitespace-nowrap flex items-center gap-2 cursor-pointer transition-colors">
+                        <i class="fa-solid fa-file-invoice"></i> Facturación
+                    </button>
+                    <button id="tab-licencias" onclick="switchTab('licencias')" class="px-4 py-2 border-b-2 border-transparent text-[#a0aabf] hover:text-white whitespace-nowrap flex items-center gap-2 cursor-pointer transition-colors">
+                        <i class="fa-solid fa-key"></i> Licencias Activas
+                    </button>
+                </div>
+
+                <!-- CONTENIDO 1: COMPRAS -->
+                <div id="content-compras" class="grid grid-cols-1 lg:grid-cols-2 gap-5"></div>
+
+                <!-- CONTENIDO 2: FACTURACIÓN -->
+                <div id="content-facturacion" class="hidden">
+                    <div class="bg-[#121e3b] border border-[#1a294c] rounded-lg p-10 text-center shadow-lg">
+                        <i class="fa-solid fa-file-invoice-dollar text-5xl text-[#ffd644] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Centro de Facturación</h3>
+                        <p class="text-[#a0aabf] max-w-md mx-auto">Aquí podrás ver y descargar los recibos en PDF de tus transacciones y auditorías solicitadas.</p>
+                        
+                        <div class="mt-8 overflow-hidden rounded-lg border border-[#1a294c]">
+                            <table class="w-full text-left text-sm text-[#a0aabf]">
+                                <thead class="bg-[#0b1224] text-[#ffd644]">
+                                    <tr>
+                                        <th class="px-4 py-3">Fecha</th>
+                                        <th class="px-4 py-3">Servicio</th>
+                                        <th class="px-4 py-3">Monto</th>
+                                        <th class="px-4 py-3 text-center">Acción</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="border-t border-[#1a294c] hover:bg-[#0b1224] transition-colors">
+                                        <td class="px-4 py-3">15 Nov 2026</td>
+                                        <td class="px-4 py-3 text-white">Endpoint Security (Pro)</td>
+                                        <td class="px-4 py-3">S/ 149.99</td>
+                                        <td class="px-4 py-3 text-center">
+                                            <button class="text-[#ffd644] hover:text-white" title="Descargar PDF"><i class="fa-solid fa-download"></i></button>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CONTENIDO 3: LICENCIAS ACTIVAS -->
+                <div id="content-licencias" class="hidden">
+                    <div class="bg-[#121e3b] border border-[#1a294c] rounded-lg p-10 text-center shadow-lg">
+                        <i class="fa-solid fa-key text-5xl text-[#ffd644] mb-4"></i>
+                        <h3 class="text-xl font-bold text-white mb-2">Mis Llaves de Producto</h3>
+                        <p class="text-[#a0aabf] max-w-md mx-auto mb-8">Administra tus claves de activación para desplegar nuestras soluciones en tus equipos o servidores.</p>
+                        
+                        <div class="bg-[#0b1224] border border-[#1a294c] p-4 rounded-lg flex flex-col md:flex-row justify-between items-center text-left mb-4 shadow-md">
+                            <div class="mb-3 md:mb-0">
+                                <p class="text-white font-bold"><i class="fa-solid fa-shield-virus text-[#ffd644] mr-2"></i> Endpoint Security (Pro)</p>
+                                <p class="text-[#a0aabf] text-xs mt-1">Dispositivos: 1/5 activados | Expira: Nov 2027</p>
+                            </div>
+                            <div class="flex items-center gap-3 w-full md:w-auto">
+                                <input type="text" value="CS-2026-ABCD-1234-WXYZ" readonly class="bg-[#121e3b] border border-[#1a294c] text-[#ffd644] font-mono text-sm px-3 py-2 rounded w-full md:w-64 focus:outline-none text-center">
+                                <button onclick="alert('Llave copiada al portapapeles!')" class="bg-[#1a294c] hover:bg-[#ffd644] text-white hover:text-[#121e3b] p-2 rounded transition-colors" title="Copiar llave">
+                                    <i class="fa-regular fa-copy"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Modal Editar Perfil -->
+    <div id="edit-modal" class="fixed inset-0 modal-overlay z-50 flex items-center justify-center hidden bg-black bg-opacity-70">
+        <div class="bg-[#121e3b] border-2 border-[#ffd644] rounded-xl p-6 w-full max-w-md shadow-[0_0_20px_rgba(255,214,68,0.2)]">
+            <div class="flex justify-between items-center mb-5 border-b border-[#1a294c] pb-3">
+                <h3 class="text-xl font-bold text-[#ffd644]">Editar Perfil</h3>
+                <button onclick="closeEditModal()" class="text-[#a0aabf] hover:text-white"><i class="fa-solid fa-xmark text-xl"></i></button>
+            </div>
+            <div class="space-y-4">
+                <div>
+                    <label class="block text-sm font-medium text-[#a0aabf] mb-1">Nombre</label>
+                    <input type="text" id="edit-name-input" class="w-full bg-[#0b1224] border border-[#1a294c] rounded px-3 py-2 text-white focus:outline-none focus:border-[#ffd644]">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-[#a0aabf] mb-1">URL Foto de Perfil</label>
+                    <input type="text" id="edit-photo-input" class="w-full bg-[#0b1224] border border-[#1a294c] rounded px-3 py-2 text-white focus:outline-none focus:border-[#ffd644]" placeholder="https://ejemplo.com/foto.jpg">
+                </div>
+            </div>
+            <div class="mt-6 flex justify-end gap-3">
+                <button onclick="closeEditModal()" class="bg-[#1a294c] hover:bg-[#28385e] text-white px-4 py-2 rounded text-sm font-bold transition-colors">Cancelar</button>
+                <button onclick="saveProfile()" class="bg-[#ffd644] hover:bg-[#e6c03d] text-[#121e3b] px-4 py-2 rounded text-sm font-bold flex items-center gap-2 transition-colors"><i class="fa-solid fa-save"></i> Guardar</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Enlace ÚNICAMENTE a usuario.js -->
+    <script src="./js/usuario.js"></script>
+<script src="./js/chatboot.js"></script>
+<script src="./js/carrito.js"></script>
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Solo Formulario</title>
+  <!-- Es indispensable mantener el CSS original para conservar los colores, fuentes y bordes -->
+  <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+
+  <main>
+    <div class="contact-container">
+      <!-- Columna Izquierda: Formulario -->
+      <section class="contact-form">
+        <h2>CONTÁCTANOS</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="presupuesto">Presupuesto</label>
+            <input type="text" id="presupuesto" name="presupuesto">
+          </div>
+          <div class="form-group">
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn">ENVIAR</button>
+        </form>
+      </section>
+
+      <!-- Columna Derecha: Redes Sociales -->
+      <section class="social-section">
+        <!-- Puedes ocultar el título con CSS si no lo quieres, pero la estructura ayuda a mantener el diseño -->
+        <div class="social-grid">
+          <div class="image-placeholder">
+            <img src="img/IG.jpg" alt="">
+          </div>
+          <div class="image-placeholder">
+            <img src="img/FB.jpg" alt="">
+          </div>
+          <div class="image-placeholder">
+            <img src="img/X.jpg" alt="">
+          </div>
+          <div class="image-placeholder">
+            <img src="img/tiktok.jpg" alt="">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+  <script src="./js/efectos.js"></script>
+  <script src="./js/contacto.js"></script>
+  <script src="./js/chatboot.js"></script>
+<script src="./js/carrito.js"></script>
+</body>
+</html>
