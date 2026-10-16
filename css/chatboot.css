@@ -1,0 +1,190 @@
+/* Estilos del botón flotante (Círculo con emoji) */
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700;
+    color: #0b1828; 
+    border: none;
+    width: 65px;       
+    height: 65px;      
+    border-radius: 50%; 
+    font-size: 30px;    
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.chat-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Contenedor principal del chat */
+.chat-container {
+    display: none; 
+    position: fixed;
+    bottom: 100px; /* Levantado para no tapar el botón flotante */
+    right: 20px;
+    width: 320px;
+    background-color: #0b1828; 
+    border: 1px solid #ffd700;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.6);
+    z-index: 1000;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+/* Cabecera del chat */
+.chat-header {
+    background-color: #162a45; 
+    color: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #ffd700;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Botones de acción en la cabecera (Minimizar y Cerrar) */
+.header-actions {
+    display: flex;
+    gap: 12px;
+}
+
+.action-btn {
+    background: none;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+.action-btn:hover {
+    color: #ffd700;
+}
+
+/* Área de mensajes principal */
+.chat-box {
+    height: 280px;
+    padding: 15px;
+    overflow-y: auto;
+    background-color: #060d16;
+}
+
+.message {
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 14px;
+    line-height: 1.4;
+    max-width: 85%;
+}
+
+.bot-message {
+    background-color: #162a45;
+    color: #ffffff;
+    border-left: 3px solid #ffd700;
+    float: left;
+    clear: both;
+}
+
+.user-message {
+    background-color: #ffd700;
+    color: #0b1828;
+    float: right;
+    clear: both;
+}
+
+/* Estilos para los botones de respuestas sugeridas */
+.suggestions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+    clear: both;
+}
+
+.sugg-btn {
+    background-color: #162a45;
+    color: #ffd700;
+    border: 1px solid #ffd700;
+    padding: 8px 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    font-size: 13px;
+    text-align: left;
+    transition: all 0.2s;
+}
+
+.sugg-btn:hover {
+    background-color: #ffd700;
+    color: #0b1828;
+}
+
+/* Área inferior de entrada de texto */
+.chat-input-area {
+    display: flex;
+    padding: 10px;
+    background-color: #162a45;
+}
+
+#chat-input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+    background-color: #ffffff;
+}
+
+#send-btn {
+    background-color: #ffd700;
+    color: #0b1828;
+    border: none;
+    padding: 10px 15px;
+    margin-left: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+/* Modifica la clase del botón para quitar rellenos extra si los hubiera */
+.chat-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ffd700;
+    color: #0b1828; 
+    border: none;
+    width: 65px;       
+    height: 65px;      
+    border-radius: 50%; 
+    display: flex;      
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.4);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+    overflow: hidden; /* Esto asegura que la imagen no se salga del círculo */
+    padding: 0;       /* Quita márgenes internos para que la imagen use todo el espacio */
+}
+
+/* NUEVA CLASE: Ajusta la imagen de la mascota dentro del botón circular */
+.chat-logo-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen al círculo sin deformarla */
+    border-radius: 50%;
+}

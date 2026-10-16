@@ -1,0 +1,296 @@
+:root {
+  --primary-yellow: #FFDE59;
+  --bg-color-start: #1e40af;
+  --bg-color-end: #0f172a;
+  --header-bg: rgba(15, 23, 42, 0.85);
+  --text-on-bg: #FFFFFF;
+  --text-on-yellow: #000000;
+  --card-bg: #FFFFFF;
+  --btn-dark: #1A1A1A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, var(--bg-color-start) 0%, var(--bg-color-end) 100%);
+  background-attachment: fixed;
+  color: var(--text-on-bg);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 222, 89, 0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* LOGO CIBERSHIELD */
+.logo-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #0F172A; 
+  color: var(--primary-yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-yellow);
+  overflow: hidden;
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.logo-icon img {
+  width: 56px;
+  height: 65px;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+  border: none;
+  outline: none;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-on-bg);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: var(--text-on-bg);
+  font-weight: 800;
+  letter-spacing: 2px;
+  transition: all 0.3s ease;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+nav ul li a:hover, nav ul li a.active {
+  color: #000000;
+  background-color: var(--primary-yellow);
+  padding: 5px 10px;
+  border-radius: 5px;
+  opacity: 1;
+}
+
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.contact-container {
+  display: flex;
+  gap: 60px;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(15, 23, 42, 0.75);
+  backdrop-filter: blur(10px);
+  padding: 3rem;
+  border-radius: 15px;
+  border: 2px solid rgba(255, 222, 89, 0.3);
+}
+
+.contact-form {
+  flex: 1;
+}
+
+.contact-form h2 {
+  font-size: 2.8rem;
+  font-weight: 900;
+  margin-bottom: 20px;
+  color: var(--primary-yellow);
+  text-shadow: 0 2px 4px rgba(0,0,0,0.4);
+}
+
+.form-group {
+  margin-bottom: 25px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-on-bg);
+}
+
+.form-group input, .form-group textarea {
+  width: 100%;
+  padding: 15px;
+  border: 2px solid rgba(255, 222, 89, 0.5);
+  background-color: rgba(15, 23, 42, 0.9);
+  color: #FFFFFF;
+  font-size: 1.1rem;
+  border-radius: 8px;
+}
+
+.form-group textarea {
+  height: 180px;
+  resize: vertical;
+}
+
+.btn {
+  background-color: var(--primary-yellow);
+  color: #000000;
+  padding: 12px 35px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(255, 222, 89, 0.3);
+}
+
+.btn:hover {
+  background-color: #e6c54c;
+  transform: translateY(-2px);
+}
+
+/* Sección contenedora derecha */
+.social-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centra horizontalmente todo el contenido */
+    justify-content: center;
+    gap: 20px;
+}
+
+.social-section h2 {
+  display: none;
+}
+
+/* Título de Redes Sociales */
+.titulo-redes {
+  color: #fceb00;
+  font-size: 1.4rem;
+  margin-top: 105px; /* Altura alineada con "Nombre" */
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+/* Contenedor de iconos forzado a 2 columnas y alineado milimétricamente con "REDES" */
+.social-grid {
+  margin-top: 0;
+  width: 215px; /* Ancho exacto para que entren solo 2 iconos por fila (95px + 25px gap + 95px) */
+  margin-left: 0; 
+  margin-right: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 25px;
+}
+
+.social-grid .image-placeholder {
+  margin: 0;
+  background: transparent;
+  border: none;
+}
+
+.social-grid img {
+  width: 95px !important;
+  height: 95px !important;
+  min-width: 95px !important;
+  min-height: 95px !important;
+  object-fit: cover;
+  border-radius: 15px;
+  margin: 0;
+  background: transparent;
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.social-grid img:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(252, 235, 0, 0.4);
+}
+
+/* SECCIÓN INFORMACIÓN */
+.info-contacto {
+  margin-top: 40px;
+  color: #ffffff;
+  width: 100%;
+}
+
+.info-contacto h3 {
+  color: #fceb00;
+  font-size: 1.4rem;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.info-contacto p {
+  font-size: 1.05rem;
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+/* Truco de alineación perfecta en columnas rectas */
+.info-contacto strong {
+  color: #fceb00;
+  display: inline-block;
+  width: 90px;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  color: var(--text-on-bg);
+  font-weight: 500;
+  border-top: 2px solid rgba(255, 222, 89, 0.3);
+  margin-top: 3rem;
+}
+
+@media (max-width: 768px) {
+  .contact-container {
+      flex-direction: column;
+      padding: 1.5rem;
+  }
+  .social-section {
+      align-items: center;
+      margin-top: 40px;
+      width: 100%;
+  }
+  .nav-container {
+      flex-direction: column;
+      gap: 20px;
+  }
+}

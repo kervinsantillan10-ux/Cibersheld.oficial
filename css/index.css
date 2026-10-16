@@ -1,0 +1,491 @@
+/* index.css - CiberShield (Fondo Azul Brillante con Degradado Radial) */
+:root {
+    --primary-yellow: #FFDE59;
+    --bg-color-start: #1e40af;
+    --bg-color-end: #0f172a;
+    --header-bg: rgba(15, 23, 42, 0.85);
+    --text-on-bg: #FFFFFF;
+    --text-on-yellow: #000000;
+    --card-bg: #FFFFFF;
+    --btn-dark: #1A1A1A;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  body {
+    background: radial-gradient(circle at center, var(--bg-color-start) 0%, var(--bg-color-end) 100%);
+    background-attachment: fixed;
+    color: var(--text-on-bg);
+    min-height: 100vh;
+    line-height: 1.6;
+  }
+  
+  header {
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+    padding: 1.5rem 0;
+    margin-bottom: 2rem;
+    border-bottom: 2px solid rgba(255, 222, 89, 0.3);
+  }
+  
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  .logo-box {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .logo-icon {
+    background-color: #0F172A; 
+    color: var(--primary-yellow);
+    padding: 10px 15px;
+    font-size: 1.2rem;
+    font-weight: 900;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid var(--primary-yellow);
+  }
+  
+  .logo-text {
+    font-size: 1.6rem;
+    font-weight: 800;
+    color: var(--text-on-bg);
+    letter-spacing: 0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  }
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: var(--text-on-bg);
+    font-weight: 800;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+    font-size: 0.9rem;
+    white-space: nowrap;
+    text-transform: uppercase;
+  }
+  
+  nav ul li a:hover, 
+  nav ul li a.active {
+    color: #000000;
+    background-color: var(--primary-yellow);
+    padding: 5px 10px;
+    border-radius: 5px;
+    opacity: 1;
+  }
+  
+  main {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 4rem auto;
+  }
+  
+  .hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 5rem;
+  }
+  
+  .hero-text {
+    flex: 1;
+  }
+  
+  .hero-text .subtitle {
+    color: var(--primary-yellow);
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 2px rgba(0,0,0,0.4);
+  }
+  
+  .hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 15px 0;
+    color: var(--text-on-bg);
+    text-shadow: 0 2px 5px rgba(0,0,0,0.4);
+  }
+  
+  .hero-text p {
+    margin-bottom: 25px;
+    color: #E2E8F0;
+    font-size: 1.1rem;
+    max-width: 90%;
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--primary-yellow);
+    color: #000000;
+    padding: 12px 30px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 222, 89, 0.3);
+  }
+  
+  .btn:hover {
+    background-color: #e6c54c;
+    transform: translateY(-2px);
+  }
+  
+  .image-placeholder {
+    flex: 1;
+    background-color: rgba(15, 23, 42, 0.6);
+    backdrop-filter: blur(5px);
+    min-height: 350px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 2px dashed rgba(255, 222, 89, 0.5);
+    border-radius: 12px;
+    color: var(--primary-yellow);
+    font-weight: bold;
+  }
+  
+  .info-section {
+    background-color: rgba(15, 23, 42, 0.75);
+    backdrop-filter: blur(10px);
+    padding: 3rem;
+    border-radius: 15px;
+    border: 2px solid rgba(255, 222, 89, 0.3);
+    margin-top: 2rem;
+  }
+  
+  .info-section h2 {
+    margin-bottom: 1.5rem;
+    color: var(--primary-yellow);
+    font-size: 2rem;
+    font-weight: 900;
+  }
+  
+  .info-content {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .info-content p {
+    flex: 1;
+    font-size: 1.1rem;
+    color: var(--text-on-bg);
+  }
+  
+  footer {
+    text-align: center;
+    padding: 2rem 0;
+    background-color: var(--header-bg);
+    backdrop-filter: blur(10px);
+    color: var(--text-on-bg);
+    font-weight: 500;
+    border-top: 2px solid rgba(255, 222, 89, 0.3);
+    margin-top: 3rem;
+  }
+  
+  @media (max-width: 768px) {
+    .nav-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+    .hero {
+      flex-direction: column;
+      text-align: center;
+    }
+    .info-content {
+      flex-direction: column;
+    }
+  }
+  
+.hero-image {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border: 2px solid var(--primary-yellow);
+    border-radius: 15px;
+    background-color: #0f172a;
+}
+
+/* Contenedor de la imagen principal */
+.hero-image {
+    width: 100%;
+    min-width: 0;
+    height: 350px;
+    overflow: hidden;
+    border: 2px solid var(--primary-yellow);
+    border-radius: 15px;
+    background-color: #0f172a;
+}
+
+/* Imagen dentro de su contenedor */
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 13px;
+}
+
+/* Contenedor de la imagen principal */
+.hero-image {
+    width: 100%;
+    min-width: 0;
+    height: 350px;
+    overflow: hidden;
+    border: 2px solid var(--primary-yellow);
+    border-radius: 15px;
+    background-color: #0f172a;
+}
+
+/* Imagen dentro de su contenedor */
+.hero-image img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 13px;
+}
+
+/* Distribución del inicio */
+.hero {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 35px;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Evita que el texto se comprima */
+.hero-texto {
+    min-width: 0;
+}
+
+/* Adaptación para celulares */
+@media (max-width: 768px) {
+    .hero {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .hero-image {
+        height: 250px;
+    }
+}
+/* Estilo mejorado para el botón en el Hero */
+/* Estilo mejorado para el botón "VER PRODUCTOS" */
+.hero-texto .boton {
+    display: inline-block;
+    margin-top: 1.8rem;                       /* Aumenta la separación respecto al párrafo anterior */
+    padding: 0.85rem 2.2rem;                  /* Botón un poco más amplio y cómodo */
+    color: var(--primary-yellow);             /* Amarillo brillante inicial */
+    background: rgba(255, 222, 89, 0.08);     /* Fondo translúcido sutil para destacar el botón por defecto */
+    border: 2px solid var(--primary-yellow);  /* Borde definido */
+    border-radius: 10px;                      /* Bordes más redondeados y modernos */
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 1.2px;                    /* Espaciado elegante entre letras */
+    text-decoration: none;
+    text-transform: uppercase;
+    opacity: 1;                               /* Cero opacidad */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); /* Transición fluida */
+    box-shadow: 0 4px 15px rgba(255, 222, 89, 0.15); /* Sombra inicial elegante */
+}
+
+/* Efecto visual al pasar el cursor (Hover) */
+.hero-texto .boton:hover {
+    background-color: var(--primary-yellow);
+    color: #0b192c;                           /* Texto oscuro de alto contraste al rellenarse */
+    box-shadow: 0 6px 25px rgba(255, 222, 89, 0.45); /* Efecto de brillo aumentado */
+    transform: translateY(-3px);              /* Elevación más notable */
+}
+
+/* Efecto al hacer clic */
+.hero-texto .boton:active {
+    transform: translateY(-1px);
+}
+
+
+/* Sección: importancia de la ciberseguridad */
+.info-section {
+    width: 90%;
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 30px;
+    box-sizing: border-box;
+    background: #101d3b;
+    border: 2px solid rgba(255, 222, 89, 0.35);
+    border-radius: 18px;
+}
+
+/* Título amarillo */
+.info-section h2 {
+    color: #ffde59;
+    text-align: center;
+    font-size: clamp(22px, 3vw, 34px);
+    margin: 0 0 30px;
+}
+
+/* Texto a la izquierda e imagen a la derecha */
+.info-content {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    align-items: center;
+    gap: 30px;
+}
+
+/* Descripción */
+.info-content p {
+    color: #ffffff;
+    font-size: 17px;
+    line-height: 1.8;
+    margin: 0;
+}
+
+/* Recuadro de la imagen */
+.image-placeholder {
+    width: 100%;
+    height: 320px;
+    min-width: 0;
+    overflow: hidden;
+    border: 2px solid #ffde59;
+    border-radius: 14px;
+    box-sizing: border-box;
+}
+
+/* La imagen se ajusta al recuadro */
+.image-placeholder img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* Adaptación para pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-section {
+        padding: 20px;
+    }
+
+    .info-content {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .image-placeholder {
+        height: 240px;
+    }
+}
+
+/* Ajustar el logo del candado */
+.logo img {
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Contenedor del logo y nombre */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-decoration: none;
+    margin-right: 40px; /* <--- AGREGA ESTA LÍNEA PARA SEPARARLO DE "INICIO" */
+
+}
+
+/* Evitar desbordamientos de imágenes */
+img {
+    max-width: 100%;
+}
+
+/* Encabezado y logo CiberShield */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 50px; /* <--- Aumenta este valor (ej. 50px o 70px) para separar el bloque del logo con la palabra INICIO */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-shrink: 0;
+    text-decoration: none;
+}
+
+/* Tamaño del candado */
+.logo img {
+    width: 48px;
+    height: 48px;
+    object-fit: contain;
+    display: block;
+}
+
+/* Nombre de la marca */
+.logo span {
+    font-size: 25px;
+    font-weight: 800;
+    color: #ffffff;
+    white-space: nowrap;
+}
+
+/* Menú de navegación */
+.nav-container nav {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 768px) {
+    .nav-container {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .logo img {
+        width: 38px;
+        height: 38px;
+    }
+
+    .logo span {
+        font-size: 20px;
+    }
+}
+
