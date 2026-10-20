@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Registro</title>
+  <!-- Es indispensable mantener el CSS original para conservar los colores, fuentes y bordes -->
+  <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+
+  <!-- Selector de idioma flotante en la esquina para no alterar la estructura del formulario -->
+  <div class="rincon-castigo" style="position: absolute; top: 20px; right: 20px; z-index: 100;">
+    <select id="selector-idioma" onchange="cambiarIdioma(this.value)">
+      <option value="es">Español</option>
+      <option value="en">English</option>
+    </select>
+  </div>
+
+  <main>
+    <div class="contact-container">
+      <!-- Columna Izquierda: Formulario -->
+      <section class="contact-form">
+        <h2 data-i18n="reg_tit">REGISTRO DE USUARIO</h2>
+        <form action="#" method="post">
+          <div class="form-group">
+            <label for="nombre" data-i18n="reg_nom">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="reg_correo">Correo Electrónico:</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="password" data-i18n="reg_pass">Contraseña:</label>
+            <input type="password" id="password" name="password">
+          </div>
+          <div class="form-group">
+            <label data-i18n="reg_gen">Género:</label>
+            <div class="radio-group" style="display: flex; gap: 15px; margin-top: 5px;">
+              <label><input type="radio" name="genero" value="femenino"> <span data-i18n="reg_fem">Femenino</span></label>
+              <label><input type="radio" name="genero" value="masculino"> <span data-i18n="reg_masc">Masculino</span></label>
+            </div>
+          </div>
+          <div class="btn-group" style="display: flex; gap: 10px; margin-top: 15px;">
+            <button type="submit" class="btn" data-i18n="reg_btn_1">Registrarse</button>
+            <button type="reset" class="btn" style="background-color: #555;" data-i18n="reg_btn_2">Limpiar</button>
+          </div>
+        </form>
+      </section>
+
+      <!-- Columna Derecha: Redes Sociales -->
+      <section class="social-section">
+        <div class="social-grid">
+          <div class="image-placeholder">
+            <img src="img/IG.jpg" alt="Instagram">
+          </div>
+          <div class="image-placeholder">
+            <img src="img/FB.jpg" alt="Facebook">
+          </div>
+          <div class="image-placeholder">
+            <img src="img/X.jpg" alt="X">
+          </div>
+          <div class="image-placeholder">
+            <img src="img/tiktok.jpg" alt="TikTok">
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="./js/efectos.js"></script>
+  <script src="./js/contacto.js"></script>
+  <script src="./js/chatboot.js"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="./js/traductor.js"></script>
+</body>
+</html>

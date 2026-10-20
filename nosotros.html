@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Nosotros</title>
+  <link rel="stylesheet" href="./css/nosotros.css">
+</head>
+<body>
+
+  <!-- Header y Navegación -->
+  <header>
+    <!-- Recuadro para cambiar de idioma -->
+    <div class="rincon-castigo">
+      <select id="selector-idioma" onchange="cambiarIdioma(this.value)">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+
+    <div class="nav-container">
+      <div class="logo-box">
+        <div class="logo-icon"><img src="img/logo-cibershelf.png" alt="Logo CiberShield"></div>
+        <span class="logo-text" data-i18n="logo_texto">CIBERSHIELD</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="menu_inicio">INICIO</a></li>
+          <li><a href="catalogo.html" data-i18n="menu_catalogo">CATÁLOGO</a></li>
+          <li><a href="servicios.html" data-i18n="menu_servicios">SERVICIOS</a></li>
+          <li><a href="nosotros.html" class="active" data-i18n="menu_nosotros">NOSOTROS</a></li>
+          <li><a href="contacto.html" data-i18n="menu_contacto">CONTACTO</a></li>
+          
+          <!-- Contenedor dinámico para la sesión -->
+          <span id="auth-container" style="display: contents;">
+            <li><a href="formulario registro.html" data-i18n="menu_registro">REGISTRO</a></li>
+            <li><a href="login.html" data-i18n="menu_login">INICIAR SESIÓN</a></li>
+          </span>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Título Sobre Nosotros -->
+    <section class="page-title-section">
+      <h1 data-i18n="nos_tit">Sobre nosotros</h1>
+      <p data-i18n="nos_sub">Conoce quiénes somos y por qué protegemos tu mundo digital</p>
+    </section>
+
+    <!-- Misión y Visión -->
+    <section class="mission-vision-container">
+      <div class="mission-box">
+        <h2 data-i18n="nos_mis_tit">Misión:</h2>
+        <p data-i18n="nos_mis_desc">Brindar soluciones de ciberseguridad accesibles y confiables para personas y empresas.</p>
+      </div>
+      <div class="vision-box">
+        <h2 data-i18n="nos_vis_tit">Visión:</h2>
+        <p data-i18n="nos_vis_desc">Ser la tienda de referencia en seguridad digital en el Perú y del mundo en el futuro.</p>
+      </div>
+    </section>
+
+    <!-- Sección del Equipo -->
+    <section class="team-section">
+      <h2 data-i18n="nos_eq">Nuestro equipo:</h2>
+      <div class="team-grid">
+        
+        <div class="team-member">
+          <div class="avatar-placeholder"><img src="img/Rodolfo Olivera.jpeg" alt="integrante1"></div>
+          <p>Olivera Espinoza Rodolfo David</p>
+        </div>
+
+        <div class="team-member">
+          <div class="avatar-placeholder"><img src="img/Cesar Vasquez.jpeg" alt="integrante2"></div>
+          <p>Vasquez Vargas Cesar Luis</p>
+        </div>
+
+        <div class="team-member">
+          <div class="avatar-placeholder"><img src="img/Kervin Santillan.jpg" alt="integrante3"></div>
+          <p>Santillan Chahuayo Kervin Dayron</p>
+        </div>
+
+        <div class="team-member">
+          <div class="avatar-placeholder"><img src="img/Ramos Adrian.jpeg" alt="integrante4"></div>
+          <p>Ramos Perez Jesus Adrian</p>
+        </div>
+
+        <div class="team-member">
+          <div class="avatar-placeholder"><img src="img/Brathlee Claudio.jpeg" alt="integrante5"></div>
+          <p>Brathlee Claudio</p>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p data-i18n="footer_texto">&copy; 2026 CiberShield - Lima, Perú</p>
+  </footer>
+
+  <script src="./js/efectos.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/chatboot.js?v=1"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="./js/traductor.js"></script>
+</body>
+</html>

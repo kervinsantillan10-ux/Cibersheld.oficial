@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Contacto</title>
+  <link rel="stylesheet" href="./css/contacto.css">
+</head>
+<body>
+
+  <header>
+    <!-- Recuadro para cambiar de idioma -->
+    <div class="rincon-castigo">
+      <select id="selector-idioma" onchange="cambiarIdioma(this.value)">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    
+    <div class="nav-container">
+      <div class="logo-box">
+        <div class="logo-icon">
+          <img src="img/logo-cibershelf.png" alt="Logo CiberShield">
+        </div>
+        <span class="logo-text" data-i18n="logo_texto">CIBERSHIELD</span>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="menu_inicio">INICIO</a></li>
+          <li><a href="catalogo.html" data-i18n="menu_catalogo">CATÁLOGO</a></li>
+          <li><a href="servicios.html" data-i18n="menu_servicios">SERVICIOS</a></li>
+          <li><a href="nosotros.html" data-i18n="menu_nosotros">NOSOTROS</a></li>
+          <li><a href="contacto.html" class="active" data-i18n="menu_contacto">CONTACTO</a></li>
+          
+          <!-- Contenedor dinámico para la sesión -->
+          <span id="auth-container" style="display: contents;">
+            <li><a href="formulario registro.html" data-i18n="menu_registro">REGISTRO</a></li>
+            <li><a href="login.html" data-i18n="menu_login">INICIAR SESIÓN</a></li>
+          </span>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <!-- Columna Izquierda: Formulario -->
+      <section class="contact-form">
+        <h2 data-i18n="cont_tit">CONTÁCTANOS</h2>
+        <form class="contact-form" id="contactForm">
+          <div class="form-group">
+            <label for="nombre" data-i18n="cont_nom">Nombre</label>
+            <input type="text" id="nombre" name="nombre">
+          </div>
+          <div class="form-group">
+            <label for="presupuesto" data-i18n="cont_pres">Presupuesto</label>
+            <input type="text" id="presupuesto" name="presupuesto">
+          </div>
+          <div class="form-group">
+            <label for="email" data-i18n="cont_correo">Correo electrónico</label>
+            <input type="email" id="email" name="email">
+          </div>
+          <div class="form-group">
+            <label for="mensaje" data-i18n="cont_msj">Mensaje</label>
+            <textarea id="mensaje" name="mensaje"></textarea>
+          </div>
+          <button type="submit" class="btn" data-i18n="cont_btn">ENVIAR</button>
+        </form>
+      </section>
+
+      <!-- Columna Derecha: Redes Sociales e Información -->
+      <section class="social-section">
+        <h3 class="titulo-redes" data-i18n="cont_redes">REDES SOCIALES</h3>
+        <div class="social-grid">
+          <div class="image-placeholder">
+            <a href="redes.html" target="_blank" rel="noopener noreferrer">
+              <img src="img/IG.jpg" alt="Instagram CiberShield">
+            </a>
+          </div>
+          <div class="image-placeholder">
+            <a href="redes.html" target="_blank" rel="noopener noreferrer">
+              <img src="img/FB.jpg" alt="Facebook CiberShield">
+            </a>
+          </div>
+          <div class="image-placeholder">
+            <a href="redes.html" target="_blank" rel="noopener noreferrer">
+              <img src="img/X.jpg" alt="X CiberShield">
+            </a>
+          </div>
+          <div class="image-placeholder">
+            <a href="redes.html" target="_blank" rel="noopener noreferrer">
+              <img src="img/tiktok.jpg" alt="TikTok CiberShield">
+            </a>
+          </div>
+        </div>
+
+        <div class="info-contacto">
+          <h3 data-i18n="info_tit">INFORMACIÓN</h3>
+          <p><strong data-i18n="info_email_lbl">Email:</strong> soporte@cibershield.com</p>
+          <p><strong data-i18n="info_tel_lbl">Teléfono:</strong> +51 951 108 456</p>
+          <p><strong data-i18n="info_dir_lbl">Dirección:</strong> <span data-i18n="info_dir_val">Av. Perú, San Martín de Porres</span></p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p data-i18n="footer_texto">&copy; 2026 CiberShield · Lima, Perú</p>
+  </footer>
+
+  <script src="./js/efectos.js"></script>
+  <script src="./js/menu.js"></script>
+  <script src="./js/chatboot.js?v=1"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="js/contacto.js"></script>
+  <script src="./js/traductor.js"></script>
+</body>
+</html>

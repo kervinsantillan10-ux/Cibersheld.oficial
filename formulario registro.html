@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CiberShield - Registro</title>
+  <link rel="stylesheet" href="./css/formulario registro.css">
+</head>
+<body>
+
+  <header>
+    <!-- Recuadro para cambiar de idioma -->
+    <div class="rincon-castigo">
+      <select id="selector-idioma" onchange="cambiarIdioma(this.value)">
+        <option value="es">Español</option>
+        <option value="en">English</option>
+      </select>
+    </div>
+    
+    <div class="nav-container">
+      <div class="logo-box">
+        <div class="logo-icon"><img src="img/logo-cibershelf.png" alt=""></div>
+        <span class="logo-text" data-i18n="logo_texto">CIBERSHIELD</span>
+      </div>
+
+      <nav>
+        <ul>
+          <li><a href="index.html" data-i18n="menu_inicio">INICIO</a></li>
+          <li><a href="catalogo.html" data-i18n="menu_catalogo">CATÁLOGO</a></li>
+          <li><a href="servicios.html" data-i18n="menu_servicios">SERVICIOS</a></li>
+          <li><a href="nosotros.html" data-i18n="menu_nosotros">NOSOTROS</a></li>
+          <li><a href="contacto.html" data-i18n="menu_contacto">CONTACTO</a></li>
+          <li><a href="formulario registro.html" class="active" data-i18n="menu_registro">REGISTRO</a></li>
+          <li><a href="login.html" data-i18n="menu_login">INICIAR SESIÓN</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-container">
+      <!-- Sección Superior: Formulario -->
+      <section class="contact-form">
+        <h2 data-i18n="reg_tit">REGISTRO DE USUARIO</h2>
+        
+        <form id="registerForm">
+            <fieldset>
+                <legend data-i18n="reg_leyenda">Crear una cuenta nueva</legend>
+                
+                <div class="form-group">
+                    <label for="reg_nombre" data-i18n="reg_nom">Nombre Completo:</label>
+                    <input type="text" id="reg_nombre" name="reg_nombre" placeholder="Escribe tu nombre" data-i18n="reg_ph_nombre" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg_email" data-i18n="reg_correo">Correo Electrónico:</label>
+                    <input type="email" id="reg_email" name="reg_email" placeholder="ejemplo@correo.com" data-i18n="reg_ph_correo" required />
+                </div>
+                
+                <div class="form-group">
+                    <label for="reg_pass" data-i18n="reg_pass">Contraseña:</label>
+                    <input type="password" id="reg_pass" name="reg_pass" placeholder="Crea una contraseña" data-i18n="reg_ph_pass" required />
+                </div>
+                
+                <div class="form-group">
+                    <label class="group-title" data-i18n="reg_gen">Género:</label>
+                    <div class="radio-group">
+                        <label class="radio-label">
+                            <input type="radio" id="reg_fem" name="reg_genero" value="femenino"/>
+                            <span data-i18n="reg_fem">Femenino</span>
+                        </label>
+                        
+                        <label class="radio-label">
+                            <input type="radio" id="reg_masc" name="reg_genero" value="masculino"/>
+                            <span data-i18n="reg_masc">Masculino</span>
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-actions">
+                    <input type="submit" value="Registrarse" class="btn" data-i18n="reg_btn_1"/>
+                    <input type="reset" value="Limpiar" class="btn" data-i18n="reg_btn_2"/>
+                </div>
+
+                <div id="mensaje" style="text-align: center; margin-top: 15px; font-weight: bold; font-size: 1.1rem;"></div>
+            </fieldset>
+        </form>
+      </section>
+
+      <!-- Sección Inferior: Redes Sociales -->
+      <section class="social-section">
+        <h2 data-i18n="reg_redes_tit">REDES SOCIALES</h2>
+        <div class="social-grid">
+          <div class="social-item">
+            <div class="social-card">
+              <img src="img/IG.jpg" alt="Instagram">
+            </div>
+            <span class="social-name">INSTAGRAM</span>
+          </div>
+
+          <div class="social-item">
+            <div class="social-card">
+              <img src="img/FB.jpg" alt="Facebook">
+            </div>
+            <span class="social-name">FACEBOOK</span>
+          </div>
+
+          <div class="social-item">
+            <div class="social-card">
+              <img src="img/X.jpg" alt="X">
+            </div>
+            <span class="social-name">X</span>
+          </div>
+
+          <div class="social-item">
+            <div class="social-card">
+              <img src="img/tiktok.jpg" alt="TikTok">
+            </div>
+            <span class="social-name">TIKTOK</span>
+          </div>
+        </div>
+
+        <div class="phone-container">
+          <img src="img/WSP.jpg" alt="Teléfono" class="phone-icon">
+          <span class="phone-text">+51 951 108 456</span>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer>
+    <p data-i18n="footer_texto">&copy; 2026 CiberShield · Lima, Perú</p>
+  </footer>
+
+  <script>
+    document.getElementById('registerForm').addEventListener('submit', async (e) => {
+        e.preventDefault(); 
+        
+        const name = document.getElementById('reg_nombre').value;
+        const email = document.getElementById('reg_email').value;
+        const password = document.getElementById('reg_pass').value;
+        const mensajeDiv = document.getElementById('mensaje');
+
+        mensajeDiv.style.color = '#ffd644';
+        mensajeDiv.textContent = 'Procesando registro...';
+
+        try {
+            const response = await fetch('/api/register', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ name, email, password })
+            });
+
+            const data = await response.json();
+            
+            if (data.success) {
+                mensajeDiv.style.color = '#4ade80';
+                mensajeDiv.textContent = data.message;
+                
+                // GUARDAMOS EL NOMBRE REAL EN EL NAVEGADOR
+                localStorage.setItem('userName', name);
+                
+                document.getElementById('registerForm').reset();
+                
+                setTimeout(() => {
+                    window.location.href = 'usuario.html'; 
+                }, 2000);
+            } else {
+                mensajeDiv.style.color = '#ff4c4c';
+                mensajeDiv.textContent = data.message;
+            }
+        } catch (error) {
+            mensajeDiv.style.color = '#ff4c4c';
+            mensajeDiv.textContent = 'Error de conexión con el servidor.';
+        }
+    });
+  </script>
+  <script src="./js/efectos.js"></script>
+  <script src="./js/chatboot.js"></script>
+  <script src="./js/carrito.js"></script>
+  <script src="./js/traductor.js"></script>
+</body>
+</html>

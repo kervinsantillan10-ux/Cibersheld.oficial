@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - CiberShield</title>
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="./css/login.css">
+</head>
+<body>
+
+    <!-- Video de fondo -->
+    <video autoplay muted loop id="bg-video">
+        <source src="./img/fondo.jpg.mp4" type="video/mp4">
+        Tu navegador no soporta videos HTML5.
+    </video>
+
+    <div class="login-container" style="position: relative;">
+        <!-- Selector de idioma flotante ubicado en la esquina superior derecha del recuadro central -->
+        <div style="position: absolute; top: 15px; right: 15px; z-index: 10;">
+            <select id="selector-idioma" onchange="cambiarIdioma(this.value)" style="background: transparent; color: white; border: 1px solid #ffd700; border-radius: 5px; padding: 4px 8px; font-weight: bold; cursor: pointer; font-size: 0.85rem;">
+                <option value="es" style="color: black;">Español</option>
+                <option value="en" style="color: black;">English</option>
+            </select>
+        </div>
+
+        <div class="logo-area">
+            <!-- Imagen con la clase para el tamaño y animación -->
+            <img src="./img/logo-cibershelf.png" alt="Logo CiberShield" class="logo-image">
+            
+            <h1 data-i18n="logo_texto">CiberShield</h1>
+            <p class="subtitle" data-i18n="log_sub">Inicia sesión en tu cuenta segura</p>
+        </div>
+
+        <form action="usuario.html" method="GET">
+            <div class="form-group">
+                <label for="email" data-i18n="log_correo">Correo Electrónico</label>
+                <input type="email" id="email" name="email" placeholder="" required>
+            </div>
+
+            <div class="form-group">
+                <label for="password" data-i18n="log_pass">Contraseña</label>
+                <input type="password" id="password" name="contrasena" placeholder="" required>
+            </div>
+
+            <button type="submit" class="btn-submit" data-i18n="log_btn">Ingresar</button>
+        </form>
+
+        <a href="index.html" class="back-home" data-i18n="log_volver">← Volver al inicio</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="./js/efectos.js"></script>
+    <script src="./js/menu.js"></script>
+    <script>
+        // Guardar sesión al hacer clic en ingresar
+        const btnIngresar = document.querySelector('button[type="submit"]');
+        if(btnIngresar) {
+            btnIngresar.addEventListener('click', function() {
+                localStorage.setItem('cs_username', 'Cesar Luis');
+            });
+        }
+    </script>
+    <script src="./js/chatboot.js"></script>
+    <script src="./js/traductor.js"></script>
+</body>
+</html>
