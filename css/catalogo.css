@@ -1,0 +1,295 @@
+/* --- Variables Globales --- */
+:root {
+  --primary-yellow: #FFDE59;
+  --bg-color-start: #1e40af; 
+  --bg-color-end: #0f172a; 
+  --header-bg: rgba(15, 23, 42, 0.85); 
+  --text-on-bg: #FFFFFF;    
+  --text-on-yellow: #000000; 
+  --card-bg: #FFFFFF;        
+  --btn-dark: #1A1A1A;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at center, var(--bg-color-start) 0%, var(--bg-color-end) 100%);
+  background-attachment: fixed;
+  color: var(--text-on-bg);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+/* --- Header y Navegación --- */
+header {
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px); 
+  padding: 1.5rem 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255, 222, 89, 0.3);
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;    
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo-box {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.logo-icon {
+  width: 100px;
+  height: 100px;
+  background-color: #0F172A; 
+  color: var(--primary-yellow);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid var(--primary-yellow);
+  overflow: hidden; /* Esto recorta cualquier contenido que sobresalga del círculo */
+  flex-shrink: 0;
+  box-sizing: border-box;
+}
+
+.logo-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Asegura que la imagen cubra el área circular sin distorsionarse ni salirse */
+  display: block;
+  border: none;
+  outline: none;
+}
+
+.logo-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: var(--text-on-bg);
+  letter-spacing: 0.5px;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+  white-space: nowrap;
+}
+
+/* --- Menú de Navegación --- */
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 35px;               
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: var(--text-on-bg);
+  font-weight: 800;
+  letter-spacing: 2px;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-bottom: 4px;
+  transition: color 180ms ease;
+  outline: none;
+}
+
+/* Línea inferior oculta por defecto */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: var(--primary-yellow);
+  transition: width 0.3s ease-in-out;
+}
+
+/* Al pasar el cursor o si la página está activa */
+nav ul li a:hover,
+nav ul li a:focus-visible,
+nav ul li a.active {
+  color: var(--primary-yellow);
+}
+
+nav ul li a:hover::after,
+nav ul li a:focus-visible::after,
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* --- Main Content --- */
+main {
+  width: 90%;
+  max-width: 1200px;
+  margin: 2rem auto 4rem auto;
+}
+
+/* --- Tarjetas de Productos (Grid) --- */
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  margin-top: 1rem;
+}
+
+.card {
+  background-color: var(--primary-yellow);
+  border-radius: 15px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4); 
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 35px rgba(255, 222, 89, 0.3); 
+}
+
+.card .image-placeholder {
+  width: 100%;
+  height: 200px;             
+  background-color: #ffffff; 
+  border-radius: 10px;       
+  display: flex;             
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;          
+  border: none;              
+  margin-bottom: 15px;       
+  box-sizing: border-box;
+  padding: 10px;             
+}
+
+.card .image-placeholder img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;       
+  display: block;
+}
+
+.card h3 {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: var(--text-on-yellow);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.card-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: auto; 
+}
+
+.price {
+  font-size: 1.5rem;
+  font-weight: 900;
+  color: var(--text-on-yellow);
+}
+
+.btn {
+  background-color: var(--btn-dark);
+  color: #FFFFFF;
+  padding: 10px 25px;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  font-size: 1rem;
+}
+
+.btn:hover {
+  background-color: #333333;
+}
+
+/* --- Footer --- */
+footer {
+  text-align: center;
+  padding: 2rem 0;
+  background-color: var(--header-bg);
+  backdrop-filter: blur(10px);
+  color: var(--text-on-bg);
+  font-weight: 500;
+  border-top: 2px solid rgba(255, 222, 89, 0.3);
+  margin-top: 3rem;
+}
+
+/* --- Responsividad --- */
+@media (max-width: 768px) {
+  .nav-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+  nav ul {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  nav ul li a,
+  nav ul li a::after {
+    transition: none;
+  }
+}
+header {
+  position: relative;
+}
+
+/* === SELECTOR DE IDIOMAS (ARRIBA A LA DERECHA) === */
+.rincon-castigo {
+  position: absolute; 
+  top: 15px; 
+  right: 20px; 
+  transform: none;
+  z-index: 1000;
+}
+
+.rincon-castigo select {
+  background-color: #0b192c; 
+  color: #ffffff; 
+  border: 2px solid #ffd700;
+  padding: 6px 12px; 
+  border-radius: 6px; 
+  font-family: Arial, sans-serif;
+  font-weight: bold; 
+  font-size: 13px; 
+  cursor: pointer; 
+  outline: none; 
+  transition: all 0.3s ease;
+}
+
+.rincon-castigo select:hover { 
+  background-color: #ffd700; 
+  color: #0b192c; 
+}
+
+.rincon-castigo select option { 
+  background-color: #0b192c; 
+  color: #ffffff; 
+}
+
+/* Ajuste para pantallas móviles */
+@media (max-width: 768px) {
+  .rincon-castigo { 
+    top: 10px; 
+    right: 10px; 
+  }
+}

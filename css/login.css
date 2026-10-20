@@ -1,0 +1,198 @@
+:root {
+    --primary-yellow: #FFDE59;
+    --bg-color-start: #1e40af;
+    --bg-color-end: #0f172a;
+    --card-bg: rgba(15, 23, 42, 0.85);
+    --text-on-bg: #FFFFFF;
+    --text-on-yellow: #000000;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #0f172a;
+    color: var(--text-on-bg);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Estilos para el video de fondo */
+#bg-video {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -1;
+    transform: translateX(-50%) translateY(-50%);
+    object-fit: cover;
+    filter: brightness(0.4) contrast(1.2);
+}
+
+.login-container {
+    width: 100%;
+    max-width: 420px;
+    background-color: var(--card-bg);
+    backdrop-filter: blur(12px);
+    padding: 2.5rem;
+    border-radius: 16px;
+    border: 2px solid rgba(255, 222, 89, 0.4);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.logo-area {
+    margin-bottom: 1.5rem;
+}
+
+/* Animación de pulso lento y constante */
+@keyframes pulsoLento {
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 15px rgba(255, 222, 89, 0.2);
+    }
+    50% {
+        transform: scale(1.07); /* Escala sutil para el efecto de latido */
+        box-shadow: 0 0 25px rgba(255, 222, 89, 0.6); /* Incrementa el resplandor */
+    }
+}
+
+/* Imagen de logo (aumentado un 50% y con animación de pulso) */
+.logo-image {
+    display: inline-block;
+    width: 120px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 2px solid var(--primary-yellow);
+    padding: 4px;
+    background-color: #0F172A;
+    margin-bottom: 0.5rem;
+    animation: pulsoLento 3s infinite ease-in-out;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 900;
+    color: var(--primary-yellow);
+    margin-bottom: 0.5rem;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+p.subtitle {
+    font-size: 0.95rem;
+    color: #94a3b8;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    text-align: left;
+    margin-bottom: 1.25rem;
+}
+
+label {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--text-on-bg);
+    margin-bottom: 0.5rem;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid rgba(255, 222, 89, 0.3);
+    background-color: rgba(15, 23, 42, 0.9);
+    color: #FFFFFF;
+    font-size: 1rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    outline: none;
+    border-color: var(--primary-yellow);
+    box-shadow: 0 0 10px rgba(255, 222, 89, 0.3);
+}
+
+input::placeholder {
+    color: #64748b;
+}
+
+.btn-submit {
+    width: 100%;
+    background-color: var(--primary-yellow);
+    color: var(--text-on-yellow);
+    padding: 12px;
+    font-size: 1rem;
+    font-weight: 800;
+    border: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 222, 89, 0.3);
+    margin-top: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.btn-submit:hover {
+    background-color: #e6c54c;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 222, 89, 0.4);
+}
+
+.back-home {
+    margin-top: 1.5rem;
+    display: block;
+    color: #94a3b8;
+    text-decoration: none;
+    font-size: 0.85rem;
+    transition: color 0.3s ease;
+}
+
+.back-home:hover {
+    color: var(--primary-yellow);
+}
+.login-container {
+    position: relative;
+}
+
+.rincon-castigo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+}
+
+.rincon-castigo select {
+    background: transparent;
+    color: #ffffff;
+    border: 1px solid #ffd700;
+    border-radius: 5px;
+    padding: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    outline: none;
+}
+
+.rincon-castigo select option {
+    color: #000000;
+}
